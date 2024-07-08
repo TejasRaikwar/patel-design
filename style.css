@@ -679,11 +679,11 @@ li>ul {
 
 /* Event gallary */
 .event-gallaries-main {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .block-gallary {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
