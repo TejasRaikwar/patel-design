@@ -699,14 +699,49 @@ li>ul {
 
 
 /* Footer */
-.footer-main-container{
+.footer-main-container {}
 
-}
-.footer-inner-container{
+.footer-inner-container {
     height: 10rem;
     width: 100%;
     background-color: #d9d9d9;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:1052px) {
+    .awards-slider .profile-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .awards-slider .prof-left {
+        width: 100%;
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    .awards-slider .prof-right {
+        width: 100%;
+    }
+
+    .awards-slider .content-bottom {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+
+    .awards-slider .content-bottom {
+        height: 9rem;
+    }
+}
+
+@media (max-width:967px) {
+    .message-container .content-container {
+        flex-direction: column;
+    }
+
+    .content-right {
+        padding-top: 1rem;
+    }
 }
