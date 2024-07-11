@@ -242,6 +242,7 @@ li>ul {
     padding: 10px;
     box-sizing: border-box;
     filter: drop-shadow(4px 5px 2px #0000003d);
+    height: 100%;
 }
 
 .block-head {
@@ -347,7 +348,7 @@ li>ul {
     align-items: center;
     justify-content: center;
     margin-top: 5px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* Announcement and Awards */
@@ -537,6 +538,10 @@ li>ul {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
+}
+
+.blocks-inner-container .block {
+    height: 100%;
 }
 
 .blocks-inner-container .block-content {
@@ -743,5 +748,47 @@ li>ul {
 
     .content-right {
         padding-top: 1rem;
+    }
+}
+
+@media (max-width:920px) {
+    .container-left {
+        width: 60%;
+    }
+
+    .container-right {
+        width: 40%;
+    }
+}
+
+
+@media (max-width:766px) {
+    .content-inner-container {
+        flex-direction: column-reverse;
+    }
+
+    .container-left {
+        width: 100%;
+    }
+
+    .container-right {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width:576px) {
+    .a-a-inner {
+        flex-direction: column;
+    }
+
+    .inner-left {
+        width: 100%;
+    }
+
+    .inner-right {
+        margin-top: 1rem;
+        width: 100%;
+        padding-left: 0px;
     }
 }
