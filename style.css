@@ -749,6 +749,9 @@ li>ul {
     .content-right {
         padding-top: 1rem;
     }
+    .content-left {
+        width: 100%;
+    }
 }
 
 @media (max-width:920px) {
