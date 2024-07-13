@@ -23,11 +23,65 @@
 <body>
     <div class="main-body-container">
         <!-- first nav -->
+
         <div class="first-nav">
+            <div id="sidebar" class="sidebar">
+                <ul>
+                    <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Departments</a></li>
+                    <li>
+                        <a href="#" id="toggleTraining">Training <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown" id="trainingDropdown">
+                            <ul>
+                                <li>link 1</li>
+                                <li>link 2</li>
+                                <li>link 3</li>
+                                <li>link 4</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" id="toggleDoc">Documents <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown" id="docDropdown">
+                            <ul>
+                                <li>
+                                    Policies
+                                    <ul>
+                                        <li>QHSE Policy</li>
+                                        <li>Drug/Alcohol Policy</li>
+                                    </ul>
+                                </li>
+                                <li>Certificates
+                                    <ul>
+                                        <li>ISO:9001</li>
+                                        <li>ISO:14001</li>
+                                        <li>ISO:45001</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" id="toggleDownloads">Downloads <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown" id="downloadsDropdown">
+                            <ul>
+                                <li>link 1</li>
+                                <li>link 2</li>
+                                <li>link 3</li>
+                                <li>link 4</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <ul class="first-nav-links">
                 <li>Home</li>
                 <li>Departments</li>
             </ul>
+            <div class="mobile-sidebar">
+                <i class="fa-solid fa-bars" onclick="openNav()"></i>
+            </div>
         </div>
         <!-- banner -->
         <div class="banner-main-container">
@@ -556,6 +610,39 @@
     <!-- Slick JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
+        document.getElementById('toggleTraining').addEventListener('click', function () {
+            var dropdown = document.getElementById('trainingDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        });
+        document.getElementById('toggleDoc').addEventListener('click', function () {
+            var dropdown = document.getElementById('docDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        });
+        document.getElementById('toggleDownloads').addEventListener('click', function () {
+            var dropdown = document.getElementById('downloadsDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        });
+
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
         $(document).ready(function () {
             $('.slider').slick({
                 infinite: true,

@@ -68,7 +68,7 @@
 }
 
 /* Dropdown */
-.dropdown {
+.navbar .dropdown {
     display: none;
     padding: 12px;
     border-radius: 10px;
@@ -704,8 +704,6 @@ li>ul {
 
 
 /* Footer */
-.footer-main-container {}
-
 .footer-inner-container {
     height: 10rem;
     width: 100%;
@@ -713,6 +711,77 @@ li>ul {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mobile-sidebar {
+    display: none;
+    margin-right: 1.5rem;
+}
+
+.mobile-sidebar i {
+    font-size: 26px;
+}
+
+/* sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #cfcfcf;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.sidebar .dropdown {
+	left: 2rem;
+	position: relative;
+	padding-left: 1rem;
+    display: none;
+}
+
+.sidebar .dropdown>ul>li{
+    color: rgb(182, 182, 182);
 }
 
 @media (max-width:1052px) {
@@ -749,6 +818,7 @@ li>ul {
     .content-right {
         padding-top: 1rem;
     }
+
     .content-left {
         width: 100%;
     }
@@ -778,7 +848,32 @@ li>ul {
         width: 100%;
         padding: 0;
     }
+
+    .navbar-container {
+        display: none;
+    }
+
+    .first-nav-links {
+        display: none;
+    }
+
+    .mobile-sidebar {
+        display: block;
+    }
+
+    .first-nav {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 1rem 0;
+    }
+
+    .image-carousel-main {
+        margin-top: 0;
+    }
 }
+
+
 
 @media (max-width:576px) {
     .a-a-inner {
